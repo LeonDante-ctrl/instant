@@ -1,6 +1,5 @@
 from flask import Flask
-from . import main
-import detetime
+import datetime
 from flask import render_template, request, url_for, abort, flash
 from flask_login import login_required
 from ..models import User, Pitch, Comment
@@ -16,7 +15,6 @@ def index():
     title = "Pitch"
     """
     title = 'Pitch'
-    pitch = Pitch.query.all()
 
     return render_template('index.html', title=title, pitchs=pitchs)
 
@@ -30,7 +28,7 @@ def profile(uname):
 
 @main.route('/user/<name>/update', methods=['GET', 'POST'])
 @login_required
-def update_profile(uname):
+def update_profile():
     user = User.query.filter_by(username=name).first()
     if user is None:
         abort(404)
