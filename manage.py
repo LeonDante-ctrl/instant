@@ -1,5 +1,4 @@
 import manage as manage
-from flask_script import Manager, Server
 from app import db
 from app.models import User, Comment, Pitch
 from flask_migrate import Migrate, MigrateCommand
