@@ -3,7 +3,7 @@ import os
 class Config:
     SECRET_KEY =os.environ.get('SECRET_KEY')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://moringa:Hellomoringa@localhost/pitch"
+    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://leondante-ctrl:MaxDante01@localhost/pitches"
     UPLOAD_PHOTOS_DEST = 'app/static/photos'
     MAIL_SERVER = 'joeljuma08@gmail.com'
     MAIL_PORT = ''
@@ -15,10 +15,10 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class testConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Hellomoringa@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://leondante-ctrl:MaxDante01@localhost/pitches'
 
 class devConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Hellomoringa@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://leondante-ctrl:MaxDante01@localhost/pitches'
     DEBUG = True
 
 config_options = {
