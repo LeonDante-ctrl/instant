@@ -1,8 +1,10 @@
-from . import db
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import User
-from . import login_manager
 from datetime import datetime
+
+from flask_login import User
+from werkzeug.security import generate_password_hash, check_password_hash
+
+from . import db
+from . import login_manager
 
 
 @login_manager.user_loader
