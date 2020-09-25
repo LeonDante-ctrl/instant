@@ -17,7 +17,7 @@ class ProdConfig(Config):
 class testConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://leondante-ctrl:MaxDante01@localhost/pitches'
 
-class devConfig(Config):
+class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://leondante-ctrl:MaxDante01@localhost/pitches'
     DEBUG = True
 
